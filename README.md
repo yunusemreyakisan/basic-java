@@ -1,2 +1,2 @@
 # Basic Java Notes
->Not : Çalıştırmak istediğiniz kodların başında ve sonunda yer alan // ifadelerini kaldırın. 
+>Not : Çalıştırmak istediğiniz kod bloğunun başında yer alan // ifadelerini kaldırın. 
