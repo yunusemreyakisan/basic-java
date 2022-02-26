@@ -2,9 +2,16 @@ public class Main {
 
     public static void main(String[] args) {
         greetings(); // Hello Java
-        degiskenler(); // degiskenler
-        ifelse(); // ifelse
-        switchyapisi(); // switchcase
+        // degiskenler(); // degiskenler
+        // ifelse(); // ifelse
+        // switchyapisi(); // switchcase
+        // fordongusu(); // for dongusu
+        // whileyapisi(); // while dongusu
+        // doWhileYapisi(); // do while dongusu
+        // diziler(); // diziler
+        // stringler(); // stringler
+        // miniProjeler(); // mini projeler
+
     }
 
     // Selamlama
@@ -24,6 +31,8 @@ public class Main {
         System.out.println("Tam sayımız : " + tamSayi); // print to screen
         System.out.println(message);
         System.out.println(ondalikliSayi);
+        System.out.println(karakter);
+        System.out.println(dogruMu);
     }
 
     public static void ifelse() {
@@ -56,7 +65,6 @@ public class Main {
 
     // for döngüsü
     public static void fordongusu() {
-        int tamSayi = 20;
         for (int i = 1; i < 10; i++) {
             System.out.println(i);
         }
@@ -165,14 +173,14 @@ public class Main {
     public static void miniProjeler() {
         // Asal Sayı Bulma
         int number = 23;
-        boolean asalMı = true;
+        boolean asalMi = true;
 
         for (int i = 2; i < number; i++) {
             if (number % 2 == 0) {
-                asalMı = false;
+                asalMi = false;
             }
         }
-        if (asalMı) {
+        if (asalMi) {
             System.out.println("Bu sayı asaldır.");
         } else {
             System.out.println("Bu sayı asal değildir!");
@@ -208,5 +216,7 @@ public class Main {
     }
 
     // Metodlar
+    public static void metodlar() {
 
+    }
 }
