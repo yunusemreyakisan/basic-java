@@ -42,7 +42,4 @@ public class Main {
         return 0;
     }
 
-final String degisiklik  = "Değişiklik yaptım.";
-
-
 }
