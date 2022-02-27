@@ -13,7 +13,7 @@ public class Main {
         System.out.println("İki sayının farkı: " + dortIslem.Cikar(4, 2)); //2
         System.out.println("İki sayının birbirine bölümü: " + dortIslem.Bol(6, 3)); //2
         System.out.println("İki sayının toplamı: " + dortIslem.Topla(5, 5)); //10
-
+        System.out.println("Üç sayının toplamı :  " + dortIslem.Topla(2, 4, 5)); //method overloading
         //Değer ataması
         int sayi1 = 10;
         int sayi2 = 20;
@@ -27,7 +27,10 @@ public class Main {
         sayilar2 = sayilar1; //sayilar2 dizisinin numarası sayilar1 dizisine atandı. İkisi de şu anda aynı yeri tutuyor.
         sayilar1[0] = 10; //sayilar1 dizisinin 0.elemanına 10 atandı ve yukarıya yazıldı. Artık sayilar1 dizisi {10,2,3} oldu.
         System.out.println("Dizi referans ataması: " + sayilar2[0]);
-       //Ürün oluşturma
+
+        //Ürün oluşturma
+        // Ben yapıcı bloğa parametreler eklersem buradaki new Product() içerisine de parametre eklemem gerekiyor. Eklemezsem çalışmıyor.
+        // Product product = new Product(2,"MSI","Bilgisayar",25.99,100); //new yapısı yapıcı blok çalıştırdı.
         Product product = new Product();
         product.setDescription("Soğuk içiniz.");//Getter-Setter, Encapsulation
         product.setId(234); //Getter-Setter, Encapsulation
