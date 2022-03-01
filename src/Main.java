@@ -1,15 +1,26 @@
 public class Main {
 
     public static void main(String[] args) {
+        //Miras Demo
+        BaseKrediManager baseKrediManager = new BaseKrediManager();
+        OgretmenKrediManager ogretmenKrediManager = new OgretmenKrediManager();
+        TarimKrediManager tarimKrediManager = new TarimKrediManager();
+        ogretmenKrediManager.Hesapla();
+        tarimKrediManager.Hesapla();
+
+
+        KrediUI krediUI = new KrediUI();
+        krediUI.KrediHesapla(new OgretmenKrediManager()); //KrediUI içerisine parametre ekledik.
+        krediUI.KrediHesapla(new TarimKrediManager()); //basekredimanager verdiğimizden miras yoluyla ikisine de erişildi.
+        //Miras
+        EmployeeManager employeeManager = new EmployeeManager();
+        employeeManager.BestEmployee(); //extends
         Customer customer = new Customer(); //Kişi sınıfından miras
         Employee employee = new Employee(); //inheritance
         customer.age = 25;
         customer.email = "yunusemreyakisan@outlook.com";
         customer.firstName = "Yunus Emre";
         customer.lastName = "Yakisan";
-
-
-
 
         //reference type
         CustomerManager customerManager = new CustomerManager();
