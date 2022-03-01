@@ -1,6 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
+        ICustomerDal customerDal = new OracleCustomerDal();
+
+
+
         GameCalculator[] gameCalculators = new GameCalculator[]{new KidsGameCalculator(), new ManCalculator(), new WomanCalculator()};
 
         //Tarım ve Öğretmen için aynı faiz hesabı uygulanırken öğrenci için farklı uygulandı.
