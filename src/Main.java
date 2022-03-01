@@ -1,14 +1,25 @@
 public class Main {
 
     public static void main(String[] args) {
+        //Tarım ve Öğretmen için aynı faiz hesabı uygulanırken öğrenci için farklı uygulandı.
+        BaseKrediManager[] baseKrediManagers = new BaseKrediManager[]{new OgretmenKrediManager(), new TarimKrediManager(), new OgrenciKrediManager()};
+        for (BaseKrediManager krediManager : baseKrediManagers) {
+            System.out.println(krediManager.hesapla(1000));
+        }
+
+        EmailLogger emailLogger = new EmailLogger();
+        emailLogger.Log("Log mesajı");
+        //Polimorphism (BaseLogger dizi içerisinde bulunanların annesi olduğundan ve miras alındığından hata almadık.
+        BaseLogger[] baseLoggers = new BaseLogger[]{new FileLogger(), new EmailLogger(), new DatabaseLogger()};
+        for (BaseLogger loger : baseLoggers) {
+            loger.Log("Mesaj");
+        }
         //Miras Demo
         BaseKrediManager baseKrediManager = new BaseKrediManager();
         OgretmenKrediManager ogretmenKrediManager = new OgretmenKrediManager();
         TarimKrediManager tarimKrediManager = new TarimKrediManager();
-        ogretmenKrediManager.Hesapla();
-        tarimKrediManager.Hesapla();
 
-
+        //Polimorphism
         KrediUI krediUI = new KrediUI();
         krediUI.KrediHesapla(new OgretmenKrediManager()); //KrediUI içerisine parametre ekledik.
         krediUI.KrediHesapla(new TarimKrediManager()); //basekredimanager verdiğimizden miras yoluyla ikisine de erişildi.

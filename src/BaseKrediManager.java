@@ -1,5 +1,5 @@
 public class BaseKrediManager {
-    public void Hesapla(){
-        System.out.println("Krediniz hesaplandı.");
+    public double hesapla(double tutar){
+       return tutar * 1.20;
     }
 }
