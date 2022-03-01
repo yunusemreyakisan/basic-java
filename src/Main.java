@@ -1,8 +1,19 @@
 public class Main {
 
     public static void main(String[] args) {
+        Customer customer = new Customer(); //Kişi sınıfından miras
+        Employee employee = new Employee(); //inheritance
+        customer.age = 25;
+        customer.email = "yunusemreyakisan@outlook.com";
+        customer.firstName = "Yunus Emre";
+        customer.lastName = "Yakisan";
+
+
+
+
         //reference type
         CustomerManager customerManager = new CustomerManager();
+        customerManager.BestPerson(); //inheritance
         customerManager.Add();
         customerManager.Remove();
         customerManager.Update();
