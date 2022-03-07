@@ -1,10 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
+        boolean z;
+        FootballerValidator footballerValidator = new FootballerValidator();
+        Footballer footballer = new Footballer();
+        FootballerManager manager = new FootballerManager();
+        footballer.name = "Ronaldo";
+        footballer.number = 7;
+        System.out.println(Footballer.name);
+        footballer.surname = "Yakışan";
+        manager.add(footballer);
+
+        //Interface
         ICustomerDal customerDal = new OracleCustomerDal();
-
-
-
         GameCalculator[] gameCalculators = new GameCalculator[]{new KidsGameCalculator(), new ManCalculator(), new WomanCalculator()};
 
         //Tarım ve Öğretmen için aynı faiz hesabı uygulanırken öğrenci için farklı uygulandı.
