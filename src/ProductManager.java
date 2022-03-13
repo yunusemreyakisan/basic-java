@@ -4,7 +4,5 @@ public class ProductManager {
         System.out.println("Ürün açıklaması : " + product.getDescription());
         System.out.println("Ürün fiyatı : " + product.getPrice());
         System.out.println("Ürün stok adeti : " + product.getStockAmount());
-
-
     }
 }
