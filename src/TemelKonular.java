@@ -1,3 +1,11 @@
+//Değişken isimlendirme kuralları:
+//CamelCase kuralıyla isimlendirme yaparken isimlerin ilk harfi büyük olmalı. Örneğin: Integer UyeSayisi
+//CamelCase, çoğunlukla sınıf isimlendirmelerinde kullanılır.
+
+//Mixed Case : Integer uyeSayisi
+//Sabit-değeri değişmeyen değişkenleri büyük harfle ve kelime aralarına alt çizgi koyarak yazınız.
+//Örneğin: public static final Integer VARSYLN_CARPISMA_KATSAYISI;
+
 public class TemelKonular {
     public static void main(String[] args) {
         greetings(); // Hello Java
