@@ -1,6 +1,18 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
+        //ArrayList Tanımlama (Obje istediğinden her türlü ifadeyi ekleyebilirim.)
+        ArrayList sayilar = new ArrayList();
+        sayilar.add(4);
+        sayilar.add("Bursa");
+        sayilar.add(true);
+        sayilar.add(5.2);
+        System.out.println("Sayılar listesinin uzunluğu: " + sayilar.size());
+
+
+
         boolean z;
         FootballerValidator footballerValidator = new FootballerValidator();
         Footballer footballer = new Footballer();

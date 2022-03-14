@@ -18,9 +18,6 @@
 //    private Integer mArkadasSayisi;
 //    private static Integer sEtkinIslemSayisi; }
 
-
-
-
 public class TemelKonular {
     public static void main(String[] args) {
         greetings(); // Hello Java
