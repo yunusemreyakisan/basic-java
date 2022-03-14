@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
 
@@ -35,6 +36,14 @@ public class Main {
             System.out.println("Ad-Soyad: " + customers.firstName + " " + customers.lastName);
 
         }
+
+
+        //Hashmap Mantığı
+        HashMap<Integer, String> kategoriler = new HashMap<Integer, String>();
+        kategoriler.put(1, "Kitap");
+        kategoriler.put(2, "Bilgisayar");
+        kategoriler.put(3, "Fare");
+        System.out.println(kategoriler);
 
         //Footballer Validator
         FootballerValidator footballerValidator = new FootballerValidator();
