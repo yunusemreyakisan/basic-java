@@ -4,16 +4,39 @@ public class Main {
 
     public static void main(String[] args) {
         //ArrayList Tanımlama (Obje istediğinden her türlü ifadeyi ekleyebilirim.)
-        ArrayList sayilar = new ArrayList();
+        ArrayList<java.lang.constant.Constable> sayilar = new ArrayList<>();
         sayilar.add(4);
         sayilar.add("Bursa");
         sayilar.add(true);
         sayilar.add(5.2);
-        System.out.println("Sayılar listesinin uzunluğu: " + sayilar.size());
+        // System.out.println("Sayılar listesinin uzunluğu: " + sayilar.size());
+        System.out.println(sayilar.set(0, 100));
+        System.out.println("0.indexteki sayı: " + sayilar.get(0)); //100
 
+        //Type-Safety
+        ArrayList<String> sehirler = new ArrayList<String>();
+        sehirler.add("Bursa");
+        sehirler.add("Istanbul");
+        sehirler.add("Erzurum");
+        //sehirler.add(true); //String korumalı olduğu için sadece liste içerisine String değerler tanımlanabilir.
+        System.out.println(sehirler.size());
 
+        for (String sehir : sehirler) {
+            System.out.println(sehir); //Bursa,Istanbul,Erzurum;
+        }
 
-        boolean z;
+        //Class ile ArrayList Yapısı
+        ArrayList<Musteri> musteriler = new ArrayList<Musteri>();
+        musteriler.add(new Musteri(1, "Yunus Emre", "Yakışan"));
+        musteriler.add(new Musteri(2, "Yagız Erhan", "Yakışan"));
+        musteriler.add(new Musteri(3, "M. Efe", "Yakışan"));
+
+        for (Musteri customers : musteriler) {
+            System.out.println("Ad-Soyad: " + customers.firstName + " " + customers.lastName);
+
+        }
+
+        //Footballer Validator
         FootballerValidator footballerValidator = new FootballerValidator();
         Footballer footballer = new Footballer();
         FootballerManager manager = new FootballerManager();
