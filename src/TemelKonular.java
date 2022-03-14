@@ -6,6 +6,21 @@
 //Sabit-değeri değişmeyen değişkenleri büyük harfle ve kelime aralarına alt çizgi koyarak yazınız.
 //Örneğin: public static final Integer VARSYLN_CARPISMA_KATSAYISI;
 
+//Java'da uygulamalar sınıflar halinde yazılır. Ayrıntılarını ilerleyen bölümlerde göreceksiniz.
+//Bir sınıfın üyesi olacak değişken tanımlayacağınız zaman onun isminin önüne m getirebilirsiniz.
+//Böylelikle kodunuzu okuyan kişi, bu değişken ismini nerede görürse görsün, sınıfın üyesi (member) olduğunu anlayacaktır.
+//Örn: public class ProfileTask {
+// private Integer mArkadasSayisi; }
+
+//Bazı sınıf değişkenleri static olarak tanımlanırlar. Böyle değişkenlerin adının önüne s ön eki getirebilirsiniz.
+//Bu da onun diğer değişkenlerden ayrılmasını kolaylaştırılacaktır.
+//Örneğin: public class ProfileTask {
+//    private Integer mArkadasSayisi;
+//    private static Integer sEtkinIslemSayisi; }
+
+
+
+
 public class TemelKonular {
     public static void main(String[] args) {
         greetings(); // Hello Java
