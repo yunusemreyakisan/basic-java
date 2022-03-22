@@ -1,9 +1,13 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         try {
             //Exception Handling
@@ -15,6 +19,22 @@ public class Main {
         } finally {
             //İster hata olsun ister olmasın yine çalışır.
             System.out.println("Her türlü çalışan blok.");
+        }
+
+        //Reading File
+        BufferedReader reader = null;
+        int total = 0;
+        try {
+            reader = new BufferedReader(new FileReader("C:\\Users\\yunus\\IdeaProjects\\basic-java\\src\\sayilar.txt"));
+            String line = null;
+            while((line=reader.readLine())!=null){
+                total += Integer.valueOf(line);
+            }
+            System.out.println("Toplam : "+total);
+        } catch (FileNotFoundException e) { //Dosyayı bulamazsa.
+            e.printStackTrace();
+        } finally {
+            reader.close();
         }
 
 
@@ -63,11 +83,11 @@ public class Main {
         FootballerValidator footballerValidator = new FootballerValidator();
         Footballer footballer = new Footballer();
         FootballerManager manager = new FootballerManager();
-        footballer.name = "Ronaldo";
-        footballer.number = 7;
+        Footballer.name = "Ronaldo";
+        Footballer.number = 7;
         System.out.println(Footballer.name);
         footballer.surname = "Yakışan";
-        manager.add(footballer);
+        FootballerManager.add(footballer);
 
         //Interface
         ICustomerDal customerDal = new OracleCustomerDal();
