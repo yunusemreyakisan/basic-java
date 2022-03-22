@@ -4,6 +4,20 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
+
+        try {
+            //Exception Handling
+            int[] sayilar = new int[]{1, 2, 3};
+            System.out.println(sayilar[5]);
+            //Birden fazla catch bloğu yazdırabiliriz.
+        } catch (Exception exception) {
+            System.out.println(exception);
+        } finally {
+            //İster hata olsun ister olmasın yine çalışır.
+            System.out.println("Her türlü çalışan blok.");
+        }
+
+
         //ArrayList Tanımlama (Obje istediğinden her türlü ifadeyi ekleyebilirim.)
         ArrayList<java.lang.constant.Constable> sayilar = new ArrayList<>();
         sayilar.add(4);
