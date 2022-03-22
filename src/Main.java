@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
         try {
             //Exception Handling
@@ -27,15 +27,28 @@ public class Main {
         try {
             reader = new BufferedReader(new FileReader("C:\\Users\\yunus\\IdeaProjects\\basic-java\\src\\sayilar.txt"));
             String line = null;
-            while((line=reader.readLine())!=null){
+            while ((line = reader.readLine()) != null) {
                 total += Integer.valueOf(line);
             }
-            System.out.println("Toplam : "+total);
+            System.out.println("Toplam : " + total);
         } catch (FileNotFoundException e) { //Dosyayı bulamazsa.
             e.printStackTrace();
         } finally {
             reader.close();
         }
+
+        //Account Manager (Banka İşlemleri)
+        AccountManager manager = new AccountManager();
+        System.out.println("Hesap : " + manager.getBakiye()); //0
+        manager.yatirilanPara(100);
+        System.out.println("Hesap : " + manager.getBakiye()); //100
+        try{
+            manager.cekilenPara(120);
+        }catch(Exception hata){
+            System.out.println(hata.getMessage()); //bakiye yetersiz
+        }
+        System.out.println("Hesapta bulunan para miktarı : " + manager.getBakiye());
+
 
 
         //ArrayList Tanımlama (Obje istediğinden her türlü ifadeyi ekleyebilirim.)
@@ -82,7 +95,7 @@ public class Main {
         //Footballer Validator
         FootballerValidator footballerValidator = new FootballerValidator();
         Footballer footballer = new Footballer();
-        FootballerManager manager = new FootballerManager();
+        FootballerManager fmanager = new FootballerManager();
         Footballer.name = "Ronaldo";
         Footballer.number = 7;
         System.out.println(Footballer.name);
